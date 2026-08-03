@@ -30,7 +30,8 @@ function initHeader() {
 function initHeroAnimations() {
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-  tl.from('.hero__badge', { y: 30, opacity: 0, duration: 0.8 })
+  tl.from('.hero__photo', { scale: 0.8, opacity: 0, duration: 1, ease: 'back.out(1.4)' })
+    .from('.hero__badge', { y: 30, opacity: 0, duration: 0.8 }, '-=0.6')
     .from('.hero__greeting', { y: 40, opacity: 0, duration: 0.8 }, '-=0.5')
     .from('.hero__name', { y: 50, opacity: 0, duration: 1, scale: 0.95 }, '-=0.6')
     .from('.hero__role', { y: 30, opacity: 0, duration: 0.8 }, '-=0.5')
