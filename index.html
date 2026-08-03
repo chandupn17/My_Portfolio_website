@@ -4,421 +4,589 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>portfolio</title>
-    <meta name="description" content="Portfolio Template for Developer" />
+    <title>Chandu PN | Software Engineer</title>
+    <meta
+      name="description"
+      content="Chandu PN — Software Engineer specializing in full-stack development, RESTful APIs, and AI-integrated solutions."
+    />
 
     <link rel="stylesheet" href="css/style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
   </head>
   <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
     <header class="header">
       <div class="header__content">
-        <div class="header__logo-container">      
+        <a href="#home" class="header__logo">
           <div class="header__logo-img-cont">
             <img
               src="./assets/jpeg/portnew.jpg"
-              alt="chandu"
+              alt="Chandu PN"
               class="header__logo-img"
             />
           </div>
-          <span class="header__logo-sub">chandu_</span><h3>here ..!</h3>
-        </div>
-        <div class="header__main">
+          <span class="header__logo-text">chandu<span class="accent">_</span>pn</span>
+        </a>
+        <nav class="header__nav">
           <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">
-                Projects
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
-            </li>
+            <li><a href="#home" class="header__link">Home</a></li>
+            <li><a href="#about" class="header__link">About</a></li>
+            <li><a href="#skills" class="header__link">Skills</a></li>
+            <li><a href="#experience" class="header__link">Experience</a></li>
+            <li><a href="#projects" class="header__link">Projects</a></li>
+            <li><a href="#achievements" class="header__link">Achievements</a></li>
+            <li><a href="#resume" class="header__link">Resume</a></li>
+            <li><a href="#contact" class="header__link">Contact</a></li>
           </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
+          <button class="header__ham" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
       </div>
-      <!-- ----respnnsive code || phone nalii noduvaga ----- -->
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
+      <div class="header__mobile-menu">
+        <ul class="header__mobile-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Hey, My name is chandu pn</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            Hello! I’m <b>Chandu PN</b>, a dedicated software engineering student at <b>MVJ College of Engineering</b>, Bangalore, with a specialization in <strong>full-stack web development.
-              <br>Here are my projects         
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="hero__content">
+          <p class="hero__badge reveal-up">
+            <span class="pulse-dot"></span>
+            Available for opportunities
           </p>
+          <h1 class="hero__title">
+            <span class="hero__greeting reveal-up">Hey, I'm</span>
+            <span class="hero__name reveal-up">Chandu PN</span>
+            <span class="hero__role reveal-up">
+              Software Engineer<span class="typing-cursor">|</span>
+            </span>
+          </h1>
+          <p class="hero__desc reveal-up">
+            Early-career <strong>Software Engineer</strong> (B.E. Computer Science) with hands-on
+            experience in full-stack development and RESTful API design. Strong foundation in OOP,
+            algorithms, SQL/data modeling, and system design — delivering client-specific solutions
+            across internships with SDLC/Agile and QA practices.
+          </p>
+          <div class="hero__cta reveal-up">
+            <a href="#projects" class="btn btn--primary">
+              <span>View Projects</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#resume" class="btn btn--outline">Download Resume</a>
+          </div>
+          <div class="hero__meta reveal-up">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Bangalore, Karnataka, India</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> chandupn.05@gmail.com</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +91-7795324362</span>
+          </div>
         </div>
-        <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projects</a>
-        </div>
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/chandu3247?utm_source=share&utm_campaign
-          =share_via&utm_content=profile&utm_medium=ios_app" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
+        <div class="hero__socials reveal-up">
+          <a href="https://www.linkedin.com/in/chandu3247" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+          <a href="https://github.com/chandupn17" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="devicon-github-original"></i>
+          </a>
+          <a href="mailto:chandupn.05@gmail.com" aria-label="Email">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
-        <div class="home-hero__social">
-          <a href="https://github.com/chandupn17" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
+        <div class="hero__scroll">
+          <div class="mouse-scroll">
+            <div class="mouse-scroll__wheel"></div>
+          </div>
         </div>
-        <div class="home-hero__social">
-          <a href="https://x.com/chandupn312490/" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/twitter-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/yt-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="https://www.instagram.com/chandan_dhodamane?utm_source=qr"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            I’m Chandu, passionate about<b> programming</b> and <b>eager to learn new skills</b>
-             and <b>software</b>, constantly pushing the boundaries of technology.
-          </span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <div class="about__content-details">
-             
-              <p class="about__content-details-para">
-              
-                  Hi, I’m <b>Chandu PN</b>, a Software Engineering student at MVJ College of Engineering, specializing in <b>MERN stack development</b>. 
-                  I'm the <b>Founder of TechinTake</b>, a platform that aggregates tech events and offers targeted promotion services. As a Tech Team member at
-                  <b> SDC-MVJCE</b>, I build and contribute to scalable web projects. I’m passionate about full-stack development and solving real-world 
-                   problems with code.
+      </section>
 
-
-
-                 
-              </p>
-              <br><hr><br>
-              <p class="about__content-details-para"><strong> Let's connect and explore opportunities to collaborate!</strong> <b><u>me here</u></b>.</p>
-            </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">React</div>
-              <div class="skills__skill">node.js</div>
-              <div class="skills__skill">express.js</div>
-              <div class="skills__skill">TailWindCSS</div>
-              <div class="skills__skill">prisma</div>
-              <div class="skills__skill">SQL</div>
-              <div class="skills__skill">NoSQL</div>
-              <div class="skills__skill">MongoDB</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">GITHUB</div>
-              <div class="skills__skill">C++</div>
-              <div class="skills__skill">java(DSA)</div>
-              <div class="skills__skill">AWS EC2</div>
-              <div class="skills__skill">Linux</div>
-              <div class="skills__skill">Postman</div>
-              <div class="skills__skill">Docker</div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            These are the projects I’ve developed throughout my programming journey.
-             They showcase my skills and progress in the field.
-          </span>
-        </h2>
-<!-- --------------------------------project section------------------------------- -->
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img style="border-radius: 4px;"
-                src="./assets/png/pro01.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Project 1</h3>
-              <p class="projects__row-content-desc">
-                This is a simple website designed for the SDC club at MVJCE banglore,
-                 providing a clean and user-friendly interface.
-              </p>
-              <a
-                href="./project-1.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Case Study</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img style="border-radius: 4px;"
-                src="./assets/png/nimmaarogya.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Project 2</h3>
-              <p class="projects__row-content-desc">
-                Nimma Arogya is an AI-enabled healthcare platform that streamlines patient, doctor, and hospital interactions through real-time appointment
-                 booking, EHR access, and virtual consultations.
-              </p>
-              <a
-                href="./project-2.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Case Study</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img style="border-radius: 4px;"
-                src="./assets/png/Mvj-eat-easy.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Project 3</h3>
-              <p class="projects__row-content-desc">
-                MVJ Eat Easy is a real-time food ordering platform that enables pre-orders, live tracking, 
-                digital payments, and admin analytics, with AI-driven menu suggestions to boost
-                 efficiency and minimize food waste.
-              </p>
-              <a
-                href="./project-3.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Case Study</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ------------------------------ -->
-    </section>
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            I’m looking to expand my network , who have a keen interest in solving software
-             problems. I recently showcased some of my work on my portfolio website and would love to discuss potential insights
-             and opportunities.
-              Let’s connect!
-          </span>
-        </h2>
-        <div class="contact__form-container">
-          <!-- -----email connection-------- -->
-          <form action="https://api.web3forms.com/submit" method="POST"
-           class="contact__form">
-            <input type="hidden" name="access_key" value="4ca717b2-b137-42c0-9d37-9d3edf56cda9">
-            <!-- ------post method with key------- -->
-
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/chandu3247?utm_
-              source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/chandupn17">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://x.com/chandupn312490/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/twitter-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <!-- <a target="_blank" rel="noreferrer" href="">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/yt-ico.png"
-                  alt="icon"
-                />
-              </a> -->
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/chandan_dhodamane?utm_source=qr">
-                <img
-                  class="main-footer__icon main-footer__icon--mr-none"
-                  src="./assets/png/insta-ico.png"
-                  alt="icon"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">chandu pn</h4>
-            <p class="main-footer__short-desc">
-             <h3> <p>Software Engineering student @ MVJCE Banglore</p></h3>
+      <!-- About -->
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">About Me</span>
+            <h2 class="section-title">Who I Am</h2>
+            <p class="section-subtitle">
+              B.E. Computer Science graduate building scalable, client-focused software solutions.
             </p>
           </div>
+          <div class="about__grid">
+            <div class="about__text reveal-left">
+              <p>
+                Early-career <strong>Software Engineer</strong> (B.E. Computer Science) with
+                hands-on experience in full-stack development and RESTful API design. Strong
+                foundation in software engineering fundamentals — <strong>OOP</strong>, algorithms,
+                <strong>SQL/data modeling</strong>, and <strong>system design</strong>.
+              </p>
+              <p>
+                Proven ability to deliver client-specific technical solutions across two internships
+                while collaborating cross-functionally and following <strong>SDLC/Agile</strong>
+                practices and <strong>QA protocols</strong>.
+              </p>
+              <div class="about__education">
+                <div class="edu-card">
+                  <div class="edu-card__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  </div>
+                  <div>
+                    <h4>MVJ College of Engineering</h4>
+                    <p>Bachelor of Engineering (B.E.) in Computer Science · CGPA 8.2</p>
+                    <p class="edu-card__location">Bengaluru, Karnataka</p>
+                    <span class="edu-card__date">Dec. 2022 – Apr. 2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="about__achievement">
+                <div class="achievement-badge">
+                  <span class="achievement-badge__icon">🏆</span>
+                  <div>
+                    <strong>Hack Hive '25 — Hackathon Winner (3rd Place)</strong>
+                    <p>Team Lead & Full-Stack Developer · Deployed AI-powered MERN portal among 40+ teams · Apr. 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about__stats reveal-right">
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="2">0</span>
+                <span class="stat-card__label">Internships</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="2">0</span>
+                <span class="stat-card__label">Major Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="8">0</span>
+                <span class="stat-card__label">CGPA</span>
+                <span class="stat-card__suffix">.2</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="60">0</span>
+                <span class="stat-card__label">% Patient Flow Gain</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        
-        <div class="main-footer__lower">
-          &copy; Copyright 2024. Made by
-          <a rel="noreferrer" target="_blank" href="chandu_pn"
-            >chandu pn</a
-          >
+      <!-- Skills -->
+      <section id="skills" class="section skills">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">Technical Skills</span>
+            <h2 class="section-title">My Toolkit</h2>
+            <p class="section-subtitle">
+              Technologies and methodologies I work with daily.
+            </p>
+          </div>
+          <div class="skills__categories">
+            <div class="skill-category reveal-up">
+              <h3 class="skill-category__title">Languages</h3>
+              <div class="skills__grid">
+                <div class="skill-card"><i class="devicon-java-plain"></i><span>Java</span></div>
+                <div class="skill-card"><i class="devicon-c-plain"></i><span>C</span></div>
+                <div class="skill-card"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+                <div class="skill-card"><i class="devicon-python-plain"></i><span>Python</span></div>
+                <div class="skill-card"><i class="devicon-javascript-plain"></i><span>JavaScript ES6+</span></div>
+              </div>
+            </div>
+            <div class="skill-category reveal-up">
+              <h3 class="skill-category__title">Frontend</h3>
+              <div class="skills__grid">
+                <div class="skill-card"><i class="devicon-react-original"></i><span>React.js</span></div>
+                <div class="skill-card"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+                <div class="skill-card"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+                <div class="skill-card"><i class="devicon-tailwindcss-plain"></i><span>Tailwind CSS</span></div>
+                <div class="skill-card"><i class="devicon-typescript-plain"></i><span>TypeScript</span></div>
+              </div>
+            </div>
+            <div class="skill-category reveal-up">
+              <h3 class="skill-category__title">Backend</h3>
+              <div class="skills__grid">
+                <div class="skill-card"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                <div class="skill-card"><i class="devicon-express-original"></i><span>Express.js</span></div>
+                <div class="skill-card"><span class="skill-icon-text">API</span><span>REST APIs</span></div>
+                <div class="skill-card"><span class="skill-icon-text">JWT</span><span>JWT Authentication</span></div>
+              </div>
+            </div>
+            <div class="skill-category reveal-up">
+              <h3 class="skill-category__title">Databases</h3>
+              <div class="skills__grid">
+                <div class="skill-card"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+                <div class="skill-card"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+                <div class="skill-card"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+                <div class="skill-card"><span class="skill-icon-text">SQL</span><span>Data Modeling</span></div>
+                <div class="skill-card"><span class="skill-icon-text">IDX</span><span>Query Optimization</span></div>
+              </div>
+            </div>
+            <div class="skill-category reveal-up">
+              <h3 class="skill-category__title">OOP & System Design</h3>
+              <div class="skills__grid skills__grid--wide">
+                <div class="skill-card"><span class="skill-icon-text">OOP</span><span>Object-Oriented Programming</span></div>
+                <div class="skill-card"><span class="skill-icon-text">DP</span><span>Design Patterns</span></div>
+                <div class="skill-card"><span class="skill-icon-text">DSA</span><span>Algorithms & Data Structures</span></div>
+                <div class="skill-card"><span class="skill-icon-text">REST</span><span>RESTful API Design</span></div>
+                <div class="skill-card"><span class="skill-icon-text">MS</span><span>Microservices Architecture</span></div>
+              </div>
+            </div>
+            <div class="skill-category reveal-up">
+              <h3 class="skill-category__title">OS & Systems</h3>
+              <div class="skills__grid">
+                <div class="skill-card"><i class="devicon-linux-plain"></i><span>Linux (Ubuntu)</span></div>
+                <div class="skill-card"><i class="devicon-bash-plain"></i><span>Bash Scripting</span></div>
+                <div class="skill-card"><i class="devicon-git-plain"></i><span>Git</span></div>
+                <div class="skill-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
+              </div>
+            </div>
+            <div class="skill-category reveal-up">
+              <h3 class="skill-category__title">Methodologies</h3>
+              <div class="skills__grid">
+                <div class="skill-card"><span class="skill-icon-text">Agile</span><span>Agile/Scrum</span></div>
+                <div class="skill-card"><span class="skill-icon-text">SDLC</span><span>SDLC</span></div>
+                <div class="skill-card"><span class="skill-icon-text">QA</span><span>QA Practices</span></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section experience">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Work Journey</h2>
+            <p class="section-subtitle">
+              Building real products through internships and fellowships.
+            </p>
+          </div>
+          <div class="timeline">
+            <div class="timeline__item reveal-up">
+              <div class="timeline__marker"></div>
+              <div class="timeline__card">
+                <div class="timeline__header">
+                  <div>
+                    <h3>AI Engineering Intern</h3>
+                    <p class="timeline__company">LearnersByte · Remote, Bangalore</p>
+                  </div>
+                  <span class="timeline__date">Jan. 2026 – May 2026</span>
+                </div>
+                <ul class="timeline__list">
+                  <li>Developed AI-integrated websites using Generative AI models under AICTE-approved Bharat Unnati AI Fellowship, leveraging LLMs; built Python-based automation scripts for data processing and workflow automation, reducing manual effort and improving operational efficiency by <strong>30%</strong>.</li>
+                  <li>Designed and optimized SQL databases by creating efficient schemas, writing complex queries, and implementing indexing techniques to improve data retrieval performance and ensure data integrity with continuous improvement.</li>
+                </ul>
+                <div class="timeline__tags">
+                  <span>Python</span><span>LLMs</span><span>Generative AI</span><span>SQL</span><span>Automation</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline__item reveal-up">
+              <div class="timeline__marker"></div>
+              <div class="timeline__card">
+                <div class="timeline__header">
+                  <div>
+                    <h3>Full Stack Development Intern</h3>
+                    <p class="timeline__company">Vidrava Technologies Pvt Ltd · Onsite, Bangalore</p>
+                  </div>
+                  <span class="timeline__date">Aug. 2025 – Dec. 2025</span>
+                </div>
+                <ul class="timeline__list">
+                  <li>Built and optimized MERN stack applications following Agile/Scrum and SDLC practices — integrating RESTful APIs, caching, and responsive React.js/Tailwind CSS UI — improving load time by <strong>35%</strong>; supported QA activities, resolved defects, and maintained code and API documentation to ensure code quality.</li>
+                  <li>Designed and optimized SQL schemas in PostgreSQL and MySQL: applied normalization, indexing strategies, and complex queries for data integrity and performance in production environments.</li>
+                </ul>
+                <div class="timeline__tags">
+                  <span>MERN</span><span>React.js</span><span>Tailwind CSS</span><span>PostgreSQL</span><span>MySQL</span><span>Agile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+              Full-stack applications solving real-world problems.
+            </p>
+          </div>
+          <div class="projects__grid">
+            <article class="project-card reveal-up">
+              <div class="project-card__img-wrap">
+                <img src="./assets/png/nimmaarogya.png" alt="Nimmaarogya - AI-Powered Patient Care Portal" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://nimma-arogya-ai-pink.vercel.app" target="_blank" rel="noreferrer" class="project-card__link">Live Demo →</a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3>Nimmaarogya</h3>
+                <p class="project-card__subtitle">AI-Powered Patient Care Portal</p>
+                <ul class="project-card__bullets">
+                  <li>Designed and deployed a full-stack AI-enabled healthcare platform using TypeScript, React.js, Node.js, Express.js, and PostgreSQL — integrating RESTful APIs, WebSockets, and real-time appointments; improved patient flow efficiency by <strong>60%</strong>.</li>
+                  <li>Implemented security best practices including JWT-based authentication and Role-Based Access Control; deployed responsive UI with Tailwind CSS following SDLC standards — achieving <strong>60% faster</strong> load times.</li>
+                </ul>
+                <div class="project-card__tags">
+                  <span>TypeScript</span><span>React.js</span><span>Node.js</span><span>Express.js</span><span>PostgreSQL</span><span>WebSocket</span><span>JWT</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://nimma-arogya-ai-pink.vercel.app" target="_blank" rel="noreferrer" class="btn btn--sm btn--primary">Live Demo</a>
+                  <a href="https://github.com/chandupn17/Nimma_arogya.ai" target="_blank" rel="noreferrer" class="btn btn--sm btn--outline">GitHub</a>
+                  <a href="./project-2.html" target="_blank" class="btn btn--sm btn--outline">Case Study</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal-up">
+              <div class="project-card__img-wrap">
+                <img src="./assets/png/Mvj-eat-easy.png" alt="MVJ-Eat-Easy - AI-Powered Canteen Ordering" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://github.com/chandupn17/YOUR_MVJ_EAT_EASY_REPO" target="_blank" rel="noreferrer" class="project-card__link">GitHub →</a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3>MVJ-Eat-Easy</h3>
+                <p class="project-card__subtitle">AI-Powered Real-Time Canteen Food Ordering System</p>
+                <ul class="project-card__bullets">
+                  <li>Designed and deployed a client-specific scalable microservice-based ordering system using React, Node.js, MySQL, WebSocket, and REST APIs — delivering live order tracking, session analytics, multi-role support, and open-source workflows.</li>
+                  <li>Engineered JWT auth, Role-Based Access Control, AI-based menu suggestions, and Razorpay payment gateway integration — boosting order efficiency by <strong>50%</strong> and cutting waste by <strong>35%</strong>.</li>
+                </ul>
+                <div class="project-card__tags">
+                  <span>React</span><span>Node.js</span><span>MySQL</span><span>WebSocket</span><span>REST APIs</span><span>Razorpay</span><span>JWT</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://github.com/chandupn17/YOUR_MVJ_EAT_EASY_REPO" target="_blank" rel="noreferrer" class="btn btn--sm btn--outline">GitHub</a>
+                  <a href="./project-3.html" target="_blank" class="btn btn--sm btn--outline">Case Study</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section id="achievements" class="section achievements">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">Achievements</span>
+            <h2 class="section-title">Recognition</h2>
+            <p class="section-subtitle">
+              Hackathons and competitions that shaped my engineering journey.
+            </p>
+          </div>
+          <div class="achievements__grid">
+            <article class="achievement-card reveal-up">
+              <div class="achievement-card__badge">🥉</div>
+              <div class="achievement-card__content">
+                <span class="achievement-card__date">Apr. 2025</span>
+                <h3>Hack Hive '25 — Hackathon Winner</h3>
+                <p class="achievement-card__role">Team Lead & Full-Stack Developer</p>
+                <p class="achievement-card__desc">
+                  Deployed an AI-powered MERN portal and secured <strong>3rd place among 40+ teams</strong>
+                  at Hack Hive '25 hackathon.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/YOUR_HACKHIVE_CERTIFICATE_ID/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn--sm btn--outline"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section id="resume" class="section resume">
+        <div class="container">
+          <div class="resume__card reveal-up">
+            <div class="resume__glow" aria-hidden="true"></div>
+            <div class="resume__content">
+              <div class="resume__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+              <div class="resume__text">
+                <span class="section-tag">Resume</span>
+                <h2 class="section-title">Download My Resume</h2>
+                <p>
+                  Full overview of my skills, internships, projects, and achievements.
+                  Hosted on Google Drive — updated August 2026.
+                </p>
+              </div>
+              <div class="resume__actions">
+                <a
+                  href="https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn--primary btn--lg"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download from Drive
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn--outline btn--lg"
+                >
+                  View on Google Drive
+                </a>
+              </div>
+            </div>
+            <div class="resume__preview">
+              <div class="resume__preview-frame">
+                <div class="resume__preview-lines">
+                  <div class="line line--title"></div>
+                  <div class="line line--sub"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line line--short"></div>
+                  <div class="line"></div>
+                  <div class="line line--short"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">
+              Open to internships, collaborations, and interesting opportunities.
+            </p>
+          </div>
+          <div class="contact__grid">
+            <div class="contact__info reveal-left">
+              <div class="contact__item">
+                <div class="contact__item-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:chandupn.05@gmail.com">chandupn.05@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+917795324362">+91-7795324362</a>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Bangalore, Karnataka, India</p>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-icon">
+                  <i class="devicon-linkedin-plain" style="font-size:2.2rem"></i>
+                </div>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <a href="https://linkedin.com/in/chandu3247" target="_blank" rel="noreferrer">linkedin.com/in/chandu3247</a>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-icon">
+                  <i class="devicon-github-original" style="font-size:2.2rem"></i>
+                </div>
+                <div>
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/chandupn17" target="_blank" rel="noreferrer">github.com/chandupn17</a>
+                </div>
+              </div>
+              <div class="contact__socials">
+                <a href="https://www.linkedin.com/in/chandu3247" target="_blank" rel="noreferrer"><i class="devicon-linkedin-plain"></i></a>
+                <a href="https://github.com/chandupn17" target="_blank" rel="noreferrer"><i class="devicon-github-original"></i></a>
+              </div>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact__form reveal-right">
+              <input type="hidden" name="access_key" value="4ca717b2-b137-42c0-9d37-9d3edf56cda9" />
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">
+                Send Message
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">chandu<span class="accent">_</span>pn</span>
+          <p>Software Engineer · B.E. CSE @ MVJCE · Bangalore, India</p>
+        </div>
+        <div class="footer__links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="footer__copy">&copy; 2026 Chandu PN. All rights reserved.</p>
       </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
